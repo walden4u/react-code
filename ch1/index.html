@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <script type="text/babel" src="./index.js"></script>
     <title>Document</title>
-
 
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
@@ -16,29 +16,4 @@
 <body>
     <div id="app"></div>
 </body>
-<script type="text/babel">
-    const OurApp = () => {
-        return (
-            <>
-                <OurHeader />
-                <OurHeader />
-                <TimeArea />
-                <Footer />
-            </>
-        );
-    };
-    
-
-    const OurHeader = () => {
-        return <h1 className="special">Our Amazing App Header Component</h1>;
-    };
-
-    const TimeArea = () => <p>The current time is {new Date().toLocaleString()}</p>;
-    
-    const Footer = () => <small>Copyright Footer Text!!!</small>;
-
-
-    setInterval(() => {ReactDOM.render(<OurApp />, document.querySelector('#app'));}, 1000);
-    // ReactDOM.render(React.createElement(OurApp), document.querySelector('#app'));
-</script>
 </html>
