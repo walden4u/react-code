@@ -17,23 +17,26 @@
     <div id="app"></div>
 </body>
 <script type="text/babel">
-    // function OurApp() {
-    //     return React.createElement('div', null, [
-    //         React.createElement('h1', null, 'Our Amazoing APP!'),
-    //         React.createElement('p', null, `The current time is ${new Date().toLocaleString()}`),
-    //         React.createElement('small', null, 'Copyright Footer Text!!!')
-    //     ]);
-    // }
-
-    function OurApp() {
+    const OurApp = () => {
         return (
             <>
-                <h1 className="special">Our Amazing APP!!!</h1>
-                <p>The current time is blank {new Date().toLocaleString()}</p>
-                <small>Copyright Footer Text!!!</small>
+                <OurHeader />
+                <OurHeader />
+                <TimeArea />
+                <Footer />
             </>
-        )
-    }
+        );
+    };
+    
+
+    const OurHeader = () => {
+        return <h1 className="special">Our Amazing App Header Component</h1>;
+    };
+
+    const TimeArea = () => <p>The current time is {new Date().toLocaleString()}</p>;
+    
+    const Footer = () => <small>Copyright Footer Text!!!</small>;
+
 
     setInterval(() => {ReactDOM.render(<OurApp />, document.querySelector('#app'));}, 1000);
     // ReactDOM.render(React.createElement(OurApp), document.querySelector('#app'));
